@@ -10,8 +10,12 @@ public class Message {
 		
 		// TODO - START
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.constructor("Message"));
+		if (data==null || data.length>127) {
+			
+			throw new IllegalArgumentException("Message is null or more than 127 bytes");
+		} else {
+			this.data=data;
+		}
 			
 		// TODO - END
 	}
