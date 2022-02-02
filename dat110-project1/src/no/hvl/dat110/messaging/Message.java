@@ -7,11 +7,14 @@ public class Message {
 	private byte[] data;
 
 	public Message(byte[] data) {
-		
+
 		// TODO - START
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.constructor("Message"));
+		if (data == null || data.length > 127) {
+		//	System.out.println("fuck this shit");
+		}else{
+			this.data = data;
+		}
 			
 		// TODO - END
 	}
