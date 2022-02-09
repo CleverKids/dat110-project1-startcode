@@ -10,10 +10,12 @@ public class Message {
 
 		// TODO - START
 		
-		if (data == null || data.length > 127) {
-		//	System.out.println("fuck this shit");
-		}else{
-			this.data = data;
+
+		if (data==null || data.length>127) {
+			
+			throw new IllegalArgumentException("Message is null or more than 127 bytes");
+		} else {
+			this.data=data;
 		}
 			
 		// TODO - END
