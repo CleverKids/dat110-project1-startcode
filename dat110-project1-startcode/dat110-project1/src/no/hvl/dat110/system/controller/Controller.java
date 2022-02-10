@@ -41,7 +41,7 @@ public class Controller  {
 			display.write(Integer.toString(temp));
 			try
 			{
-				Thread.sleep(1000);
+				Thread.sleep(900);
 			}
 			catch(InterruptedException ex)
 			{
