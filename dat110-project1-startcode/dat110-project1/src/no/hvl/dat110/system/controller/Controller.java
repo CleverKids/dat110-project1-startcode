@@ -34,7 +34,21 @@ public class Controller  {
 		
 		displayclient.connect();
 		sensorclient.connect();
-		
+
+		for (int i = 0; i<N;i++) {
+
+			int temp = sensor.read();
+			display.write(Integer.toString(temp));
+			try
+			{
+				Thread.sleep(1000);
+			}
+			catch(InterruptedException ex)
+			{
+				Thread.currentThread().interrupt();
+			}
+		}
+
 		// TODO - END
 		
 		stopdisplay.stop();
